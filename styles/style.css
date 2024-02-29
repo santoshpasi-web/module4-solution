@@ -1,0 +1,26 @@
+.spnavbar {
+    background: #7a0101;
+    z-index: 100;
+    width: 100%;
+}
+a.navbar-brand {
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.5rem;
+    border-right-style: double;
+    padding-right: 25px;
+}
+h1{
+    padding: 20px 20px 10px 20px;
+    font-style: italic;
+    text-align: center;
+    text-transform: capitalize;
+    border-bottom: 1px solid #8b00008a;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+li.ng-scope {
+    border-bottom: 1px solid #dee2e6;
+    margin-left: 25px;
+    padding: 2px 0px 2px 0px;
+}

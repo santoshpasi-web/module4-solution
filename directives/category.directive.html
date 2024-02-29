@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<body>
+  <div>
+    <ul>
+      <div class="row mt-5">
+        <div class="col-md-3">
+          <div class="position-fixed">
+            <h1>{{catCtrl.title}}</h1>
+            <li ng-repeat="category in catCtrl.categories" style="list-style: none">
+              <a ui-sref="categories.items({id: {{$index}}})">{{category.category.name}}</a>
+            </li>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <ui-view></ui-view>
+        </div>
+      </div>
+    </ul>
+  </div>
+</body>
+
+</html>

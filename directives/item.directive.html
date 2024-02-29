@@ -1,0 +1,28 @@
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<body>
+  <div>
+    <h1>{{ itemCtrl.category.name}} ({{itemCtrl.category.short_name}})</h1>
+    <h2 class="pt-3">List of Available Menus for <span style="color:#7a0101">{{itemCtrl.category.name}}</span></h2>
+    <hr>
+    <div class="row">
+      <div ng-repeat="item in itemCtrl.items" class="col-md-6">
+        <div class="card text-start mt-2" style="min-height: 180px;">
+          <div class="card-body d-flex flex-column align-items-between">
+            <h4 class="card-title">{{item.name}} ({{item.short_name}})</h4>
+            <h5 class="card-subtitle text-danger">
+              {{item.price_large | currency}}
+            </h5>
+            <p class="card-text mt-auto text-muted">{{item.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

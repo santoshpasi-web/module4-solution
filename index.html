@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="menuApp">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Restaurant Menu App</title>
+  <link rel="stylesheet" href="styles/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.1.0/angular-ui-router.js"></script>
+  <script src="services/data.service.js"></script>
+  <script src="controllers/home.controller.js"></script>
+  <script src="controllers/category.controller.js"></script>
+  <script src="controllers/item.controller.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-dark spnavbar position-fixed ">
+    <a class="navbar-brand" href="#">Restaurant Menu</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" ui-sref="home" ui-sref-active="active" aria-current="page">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" ui-sref="categories" ui-sref-active="active">Categories</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-4">
+    <div class="d-flex justify-content-center align-items-center mt-5" ng-if="showSpinner">
+      <div class="spinner-border text-secondary spinner-border-sm p-4" role="status"></div>
+    </div>
+
+    <div class="mt-5">
+      <ui-view ng-hide="showSpinner"></ui-view>
+    </div>
+  </div>
+</body> 
+
+</html>
